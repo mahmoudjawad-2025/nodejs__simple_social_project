@@ -1,6 +1,7 @@
 import UserModel from "../../../db/models/user_model.js";
 import GlobalError from "../../utils/global_error.js";
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Get User
 
 export const getUser_findOne = async (req, res) => {
     const { id } = req.params;
@@ -30,10 +31,7 @@ export const getUser_findById = async (req, res) => {
     return res.json(user);
 }
 
-
-
-//------------------------------------------------------------------------------------------
-
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Delete User
 
 export const deleteUser = async (req, res) => {
     const { id } = req.params;
@@ -60,9 +58,7 @@ export const deleteUser_findOneAndDelete = async (req, res) => {
     return res.json(user);
 }
 
-
-//------------------------------------------------------------------------------------------
-
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Update User
 
 export const updateUser = async (req, res, next) => {
 

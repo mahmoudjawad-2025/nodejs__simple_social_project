@@ -1,60 +1,4 @@
-# Project: ums
-# 📁 Collection: user 
-undefined 
-
-
-## End-point: get_all
-### Method: GET
->```
->{{base_url}}/users
->```
-### Headers
-
-|Content-Type|Value|
-|---|---|
-|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
-
-
-
-<br>
-<hr>
-<br>
-
-## End-point: delete
-### Method: DELETE
->```
->{{base_url}}/users/5
->```
-### Headers
-
-|Content-Type|Value|
-|---|---|
-|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NTUzMTV9.qTjBbOzfyS_Ko7wlaFGD30EV1IcVvbIPi9t3x_xX67c|
-
-
-
-
-<br>
-<hr>
-<br>
-
-## End-point: upload
-### Method: PUT
->```
->{{base_url}}/users/upload/1
->```
-### Body formdata
-
-|Param|value|Type|
-|---|---|---|
-|image|postman-cloud:///1f118138-4665-4420-b3c6-7eda3d1af1ea|file|
-
-
-<br>
-<hr>
-<br>
-
-
+# Project: simple_social_project
 # 📁 Collection: auth 
 undefined 
 
@@ -64,21 +8,80 @@ undefined
 >```
 >{{base_url}}/auth/register
 >```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
 ### Body (**raw**)
 
 ```json
 {
-    "userName":"mahmoud2",
-    "email":"mahmoodjawad11112@gmail.com",
-    "password":"123"
-
+    "email":"mahmoodjawad07@gmail.com", 
+    "password":"123456", 
+    "name":"mahmoud", 
+    "age":"12"
 }
 ```
 
 
-<br>
-<hr>
-<br>
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: registerSave
+### Method: POST
+>```
+>{{base_url}}/auth/registerSave
+>```
+### Body (**raw**)
+
+```json
+{
+    "email":"mahmoodjawad1111@gmail.com", 
+    "password":"123", 
+    "name":"mahmoudd", 
+    "age":"122"
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: registerMany
+### Method: POST
+>```
+>{{base_url}}/auth/registerMany
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+### Body (**raw**)
+
+```json
+[
+    {
+        "email":"mahmoodjawad11112001@gmail.com", 
+        "password":"123", 
+        "name":"mahmoud", 
+        "age":"12"
+    },
+    {
+        "email":"mahmoodjawad11112002@gmail.com", 
+        "password":"123", 
+        "name":"mahmoud", 
+        "age":"12"
+    }
+]
+
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: login
 ### Method: POST
@@ -89,26 +92,51 @@ undefined
 
 ```json
 {
-    "email":"mahmoodjawad1111@gmail.com",
-    "password":"123"
-
+    "email":"mahmoodjawad07@gmail.com", 
+    "password":"123456"
 }
 ```
 
 
-<br>
-<hr>
-<br>
-
-
-# 📁 Collection: blog 
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+# 📁 Collection: user 
 undefined 
 
 
-## End-point: get all
+## End-point: getAll_find
 ### Method: GET
 >```
->{{base_url}}/blogs/getAll/
+>{{base_url}}/users/getAll_find
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getAll_findByConfirmEmail
+### Method: GET
+>```
+>{{base_url}}/users/getAll_findByConfirmEmail
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getUser_findOne
+### Method: GET
+>```
+>{{base_url}}/users/getUser_findOne/69ab4f18e655193226ca7878
 >```
 ### Headers
 
@@ -121,17 +149,91 @@ undefined
 
 |Param|value|
 |---|---|
-||null|
+|id|69ab4e230be7345d0a2f0294|
 
 
-<br>
-<hr>
-<br>
 
-## End-point: create
-### Method: POST
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getUser_findById
+### Method: GET
 >```
->{{base_url}}/blogs/create/
+>{{base_url}}/users/getUser_findById/69ab4f18e655193226ca7878
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: deleteUser_findByIdAndDelete
+### Method: DELETE
+>```
+>{{base_url}}/users/deleteUser_findByIdAndDelete/69ab4f18e655193226ca7878
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: deleteUser_findOneAndDelete
+### Method: DELETE
+>```
+>{{base_url}}/users/deleteUser_findOneAndDelete/69ab52609eb0c2e0705cf6c0
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: deleteUser
+### Method: DELETE
+>```
+>{{base_url}}/users/deleteUser/69ab4e230be7345d0a2f0294
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: updateUser_updateMany
+### Method: PATCH
+>```
+>{{base_url}}/users/updateUser_updateMany
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: updateUser_findByIdAndUpdate
+### Method: PATCH
+>```
+>{{base_url}}/users/updateUser_findByIdAndUpdate/69ab4f18e655193226ca7878
 >```
 ### Headers
 
@@ -144,24 +246,155 @@ undefined
 
 ```json
 {
-    "title":"blog 1",
-    "description":"desc 1"
+    "email": "mahmoodjawad1111@gmail.com",
+    "userName": "mahmoudd_1"
 }
 ```
 
 
-<br>
-<hr>
-<br>
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
-## End-point: getDetails
+## End-point: updateUser
+### Method: PATCH
+>```
+>{{base_url}}/users/updateUser/69ac81c04e1c4accb273ea95
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+### Body (**raw**)
+
+```json
+{
+    "email": "mahmoodjawad07@gmail.com",
+    "userName": "mahmoudd_77"
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: updateUser_findOneAndUpdate
+### Method: PATCH
+>```
+>{{base_url}}/users/updateUser_findOneAndUpdate/69ac81c04e1c4accb273ea95
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1haG1vdWQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzI2NjI3MzF9.XJJ6jLnjhaP3m9PwxUafJHJv7-IVCENzHgeQXvLpPU8|
+
+
+### Body (**raw**)
+
+```json
+{
+    "email": "mahmoodjawad07@gmail.com",
+    "userName": "mahmoudd_17"
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+# 📁 Collection: post 
+undefined 
+
+
+## End-point: getAll
 ### Method: GET
 >```
->{{base_url}}/blogs/getDetails/1
+>{{base_url}}/posts/getAll
 >```
+### Headers
 
-<br>
-<hr>
-<br>
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWMwZTUwNzUzZGMwOWI5OTkwNWZjNCIsInVzZXJOYW1lIjoibWFobW91ZCIsImlhdCI6MTc3Mjg4MzU0OH0.gGDuvusM9zDBFL4g9GpNp0OQUs9au-Ysinf03ECJ_AI|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: createPost
+### Method: POST
+>```
+>{{base_url}}/posts/createPost
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWM4MWMwNGUxYzRhY2NiMjczZWE5NSIsInVzZXJOYW1lIjoibWFobW91ZCIsImlhdCI6MTc3MjkxMzA5OH0.ZkVqlHmBh1HFFpjImnYvX1avL0vhvVYT_L0HAz_PBpQ|
+
+
+### Body (**raw**)
+
+```json
+{
+    "title": "post 22 _ title",
+    "caption": "description 222 "
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: likePost
+### Method: PATCH
+>```
+>{{base_url}}/posts/69ac82bb4e1c4accb273eaa6/likePost
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWMwZTUwNzUzZGMwOWI5OTkwNWZjNCIsInVzZXJOYW1lIjoibWFobW91ZCIsImlhdCI6MTc3Mjg4MzU0OH0.gGDuvusM9zDBFL4g9GpNp0OQUs9au-Ysinf03ECJ_AI|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: unlikePost
+### Method: PATCH
+>```
+>{{base_url}}/posts/69ac0cb446f947a9fcb8a66c/unlikePost
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWMwZTUwNzUzZGMwOWI5OTkwNWZjNCIsInVzZXJOYW1lIjoibWFobW91ZCIsImlhdCI6MTc3Mjg4MzU0OH0.gGDuvusM9zDBFL4g9GpNp0OQUs9au-Ysinf03ECJ_AI|
+
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: createComment
+### Method: POST
+>```
+>{{base_url}}/posts/69ac82bb4e1c4accb273eaa6/createComment
+>```
+### Headers
+
+|Content-Type|Value|
+|---|---|
+|token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWMwZTUwNzUzZGMwOWI5OTkwNWZjNCIsInVzZXJOYW1lIjoibWFobW91ZCIsImlhdCI6MTc3Mjg4MzU0OH0.gGDuvusM9zDBFL4g9GpNp0OQUs9au-Ysinf03ECJ_AI|
+
+
+### Body (**raw**)
+
+```json
+{
+    "text":"hhhhhhhhhh77777777777777777777777777hhhhhhhh"
+}
+```
+
+
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 _________________________________________________
 Powered By: [postman-to-markdown](https://github.com/bautistaj/postman-to-markdown/)

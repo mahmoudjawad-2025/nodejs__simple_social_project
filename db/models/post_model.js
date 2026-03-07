@@ -1,5 +1,7 @@
 import { Schema, Types, model } from "mongoose";
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Post Schema Definition
+
 const postSchema = new Schema(
     {
         title: {
@@ -42,6 +44,8 @@ postSchema.virtual('comments', {
     localField: '_id',
     foreignField: 'postId'
 });
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Model
 
 const postModel = model('Post', postSchema);
 export default postModel;

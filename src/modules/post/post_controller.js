@@ -1,5 +1,6 @@
 import postModel from "../../../db/models/post_model.js"
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Get Posts
 
 export const getAllByVirtual = async (req, res) => {
     const posts = await postModel.find({}).populate([
@@ -91,14 +92,18 @@ export const getAllByVirtual = async (req, res) => {
 
 
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Create Post
+
 export const createPost = async (req, res) => {
     const { title, caption } = req.body;
 
+    // internal comment: create post with user ID from token
     const post = await postModel.create({ title, caption, userId: req.id });
 
     return res.status(201).json({ message: "success", post });
 }
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Vote
 
 export const likePost = async (req, res) => {
 
@@ -128,6 +133,7 @@ export const likePost = async (req, res) => {
     return res.status(200).json({ message: "success", post });
 }
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Unlike Post
 
 export const unlikePost = async (req, res) => {
 

@@ -1,6 +1,8 @@
 import commentModel from "../../../db/models/comment_model.js";
 import postModel from "../../../db/models/post_model.js"
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Get All Comments
+
 export const getAll = async (req, res) => {
     const posts = await postModel.find().populate(
         {
@@ -18,6 +20,7 @@ export const getAll = async (req, res) => {
     );
 }
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Create Comment
 
 export const createComment = async (req, res) => {
     const { id } = req.params;

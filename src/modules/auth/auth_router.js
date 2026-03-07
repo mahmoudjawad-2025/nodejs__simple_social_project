@@ -6,11 +6,13 @@ import * as schemas from './auth_validation.js';
 
 const router = Router();
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Registration
 
 router.post('/register', validation(schemas.registerSchema), asyncHandler(register));
 router.post('/registerSave', validation(schemas.registerSchema), asyncHandler(register_save));
 router.post('/registerMany', validation(schemas.registerManySchema), asyncHandler(register_many));
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Login
 
 router.post('/login', validation(schemas.loginSchema), asyncHandler(login));
 

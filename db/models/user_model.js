@@ -1,5 +1,7 @@
 import { Schema, model } from "mongoose";
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - User Schema Definition
+
 const userSchema = new Schema({
     userName: {
         type: String,
@@ -8,6 +10,7 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -24,7 +27,9 @@ const userSchema = new Schema({
     age: {
         type: Number,
     }
-});
+}, { timestamps: true });
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Model
 
 const userModel = model('User', userSchema);
 export default userModel;

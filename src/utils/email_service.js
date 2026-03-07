@@ -10,7 +10,7 @@ export async function sendEmail(to, subject, html) {
     });
 
     const info = await transporter.sendMail({
-        from: `"Node 10" <${process.env.EMAIL_USER}>`,
+        from: `"Social App" <${process.env.EMAIL_USER || 'no-reply@example.com'}>`,
         to,
         subject,
         html,

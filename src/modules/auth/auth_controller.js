@@ -3,21 +3,25 @@ import userModel from '../../../db/models/user_model.js';
 import jwt from 'jsonwebtoken';
 import GlobalError from '../../utils/global_error.js';
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Register
+
 export const register = async (req, res) => {
     const { email, password, name, age } = req.body;
 
-    const hash = await bcrypt.hash(password, 8);
+    // internal comment: Hash the password and create user
+    const hash = await bcrypt.hash(password, parseInt(process.env.SALT_ROUNDS) || 8);
     const user = await userModel.create({ userName: name, email, password: hash, age });
 
     return res.json({ message: "success", user });
 }
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Register Save
 
 export const register_save = async (req, res) => {
 
     const { email, password, name, age } = req.body;
 
-    const hash = await bcrypt.hash(password, 8);
+    const hash = await bcrypt.hash(password, parseInt(process.env.SALT_ROUNDS) || 8);
     const user = new userModel({ userName: name, email, password: hash, age });
 
     await user.save();
@@ -26,6 +30,7 @@ export const register_save = async (req, res) => {
     return res.json({ message: "success", user });
 }
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Register Many
 
 export const register_many = async (req, res) => {
     const usersData = Array.isArray(req.body) ? req.body : [req.body];
@@ -35,7 +40,7 @@ export const register_many = async (req, res) => {
         if (!password) {
             throw new GlobalError("Password is required for all users", 400);
         }
-        const hash = await bcrypt.hash(password, 8);
+        const hash = await bcrypt.hash(password, parseInt(process.env.SALT_ROUNDS) || 8);
         return {
             userName: name,
             email,
@@ -48,8 +53,7 @@ export const register_many = async (req, res) => {
     return res.json({ message: "success", users });
 }
 
-// -----------------------------------------------------------------------------------------
-
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Login
 
 export const login = async (req, res, next) => {
 
@@ -67,7 +71,7 @@ export const login = async (req, res, next) => {
         return next(new GlobalError('invalid password', 400));
     }
 
-    const token = jwt.sign({ id: user._id, userName: user.userName }, process.env.JWT_SECRET);
+    const token = jwt.sign({ id: user._id, userName: user.userName }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN || '1h' });
 
     return res.status(200).json({ message: "success", token });
 }

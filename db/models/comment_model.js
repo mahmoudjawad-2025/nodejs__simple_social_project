@@ -1,5 +1,7 @@
 import { Schema, Types, model } from "mongoose";
 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Comment Schema Definition
+
 const commentSchema = new Schema({
     text: {
         type: String,
@@ -18,6 +20,8 @@ const commentSchema = new Schema({
 }, {
     timestamps: true,
 });
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Model
 
 const commentModel = model('Comment', commentSchema);
 export default commentModel;

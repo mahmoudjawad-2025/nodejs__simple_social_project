@@ -6,9 +6,15 @@ import cors from 'cors';
 import GlobalError from './utils/global_error.js';
 
 const initApp = (app, express) => {
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Database
     connectionDB();
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Middlewares
     app.use(express.json());
     app.use(cors());
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Routes
     app.use('/users', userRouter);
     app.use('/auth', authRouter);
     app.use('/posts', postRouter);
@@ -17,6 +23,7 @@ const initApp = (app, express) => {
         return res.status(200).json({ message: "Welcom !" });
     });
 
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Error Handling
     app.all('*path', (req, res, next) => {
         return next(new GlobalError(`Page Not Found: ${req.originalUrl}`, 404));
     });
