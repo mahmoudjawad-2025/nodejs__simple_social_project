@@ -4,7 +4,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
 
-A robust, secure, and fully-featured Social Networking API built with **Node.js, Express, and MongoDB**. This project demonstrates clean architecture, advanced document modeling, and production-ready security practices, making it an excellent showcase of backend development skills for recruiters.
+A Social Networking API built with **Node.js**, **Express**, and **MongoDB**. This project demonstrates clean architecture, advanced document modeling, and production-ready security practices, showcasing a solid foundation in backend development.
 
 ---
 
@@ -89,5 +89,7 @@ Detailed documentation for all API endpoints can be found in the [API Document](
 <br>
 
 ## 📞 Contact
-📧 mahmoudjawad02025@gmail.com
-🔗 GitHub: [mahmoudjawad-2025](https://github.com/mahmoudjawad-2025/)
+
+- 📧 **Email**: [mahmoudjawad02025@gmail.com](mailto:mahmoudjawad02025@gmail.com)
+- 💻 **GitHub Profile**: [@mahmoudjawad-2025](https://github.com/mahmoudjawad-2025/)
+- 💼 **LinkedIn:** [linkedin.com/in/mahmoud-abu-alsebaa](https://linkedin.com/in/mahmoud-abu-alsebaa)
